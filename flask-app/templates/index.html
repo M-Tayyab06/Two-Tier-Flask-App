@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flask App</title>
+</head>
+<body>
+    <h1>Submit a Prompt</h1>
+    <form method="POST">
+        <input type="text" name="user_input" placeholder="Enter a prompt" required>
+        <button type="submit">Submit</button>
+    </form>
+    <h2>Stored Prompts</h2>
+    <ul>
+        {% for prompt in prompts %}
+        <li>{{ prompt[0] }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
